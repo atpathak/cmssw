@@ -5,7 +5,7 @@ import sys
 from Configuration.Eras.Era_Run3_cff import Run3
 process = cms.Process("PIXELDQMLIVE", Run3)
 
-live=True
+live=False
 unitTest = False
 
 if 'unitTest=True' in sys.argv:
