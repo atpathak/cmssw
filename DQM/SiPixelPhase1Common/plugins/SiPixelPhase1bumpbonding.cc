@@ -205,6 +205,7 @@ namespace {
 	return false;
       }
     }
+    //std::cout << " i_surrounded: " << i_surrounded << std::endl;
     if(i_surrounded==8){
       return true;
     }
@@ -218,7 +219,7 @@ namespace {
 	if(M.pixel[i][j]==false && is_surrounded(M,i,j)==false){
 	  surrounded.pixel[i][j] = true;
 	}
-	std::cout << " i: " << i << " j: " << j << " M.pixel[i][j]: " << M.pixel[i][j] << " surrounded.pixel[i][j]: " << surrounded.pixel[i][j] << " is_surrounded(M,i,j): " << is_surrounded(M,i,j) << std::endl;
+	//std::cout << " i: " << i << " j: " << j << " M.pixel[i][j]: " << M.pixel[i][j] << " is_surrounded(M,i,j): " << is_surrounded(M,i,j) << " surrounded.pixel[i][j]: " << surrounded.pixel[i][j] << std::endl;
       }
     }
     return surrounded;
@@ -232,8 +233,8 @@ namespace {
 	std::cout << " x: "<< x <<" y: "<< y << " Content: "<< h->getTH2F()->GetBinContent(x+1, y+1) << std::endl;
 	std::vector<uint8_t> roc_roc_x_rocy = get_roc_col_row(uint16_t(x), uint16_t(y));
 	std::vector<int> roc_roc_x_rocy_py = get_roc_col_row_py(int(x), int(y));
-	std::cout << "roc_roc_x_rocy[0]: "<< unsigned(roc_roc_x_rocy[0]) <<" roc_roc_x_rocy[1]: "<< unsigned(roc_roc_x_rocy[1]) << " roc_roc_x_rocy[2]: "<< unsigned(roc_roc_x_rocy[2]) << std::endl;
-	std::cout << "roc_roc_x_rocy_py[0]: "<< roc_roc_x_rocy_py[0] <<" roc_roc_x_rocy_py[1]: "<< roc_roc_x_rocy_py[1] << " roc_roc_x_rocy_py[2]: "<< roc_roc_x_rocy_py[2] << std::endl;
+	//std::cout << "roc_roc_x_rocy[0]: "<< unsigned(roc_roc_x_rocy[0]) <<" roc_roc_x_rocy[1]: "<< unsigned(roc_roc_x_rocy[1]) << " roc_roc_x_rocy[2]: "<< unsigned(roc_roc_x_rocy[2]) << std::endl;
+	//std::cout << "roc_roc_x_rocy_py[0]: "<< roc_roc_x_rocy_py[0] <<" roc_roc_x_rocy_py[1]: "<< roc_roc_x_rocy_py[1] << " roc_roc_x_rocy_py[2]: "<< roc_roc_x_rocy_py[2] << std::endl;
 	if (h->getTH2F()->GetBinContent(x + 1, y + 1)) {
 	  M.roc[roc_roc_x_rocy[0]][roc_roc_x_rocy[1]][roc_roc_x_rocy[2]] = true;
 	  M.pixel[y][x] = true;
@@ -241,8 +242,8 @@ namespace {
 	  M.roc[roc_roc_x_rocy[0]][roc_roc_x_rocy[1]][roc_roc_x_rocy[2]] = false;
 	  M.pixel[y][x] = false;
 	}
-	std::cout << " M.roc: " << M.roc[roc_roc_x_rocy[0]][roc_roc_x_rocy[1]][roc_roc_x_rocy[2]] << std::endl;
-	std::cout << " M.pixel: " << M.pixel[y][x] << std::endl;
+	//std::cout << " M.roc: " << M.roc[roc_roc_x_rocy[0]][roc_roc_x_rocy[1]][roc_roc_x_rocy[2]] << std::endl;
+	//std::cout << " M.pixel: " << M.pixel[y][x] << std::endl;
       }
     }
     return M;
