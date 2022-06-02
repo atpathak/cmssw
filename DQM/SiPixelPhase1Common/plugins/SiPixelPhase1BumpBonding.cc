@@ -378,7 +378,7 @@ namespace {
 
       iBooker.cd();
       iBooker.setCurrentFolder(digipathName+"/");
-      badbonding_[digihistName+"_deadRegion"] = iBooker.book2D(digihistName+"_deadRegion", digihistName+"_deadRegion;col;row", 416,-0.5,415.5, 160,-0.5,159.5);
+      badbonding_[digihistName+"_deadRegion"] = iBooker.book2S(digihistName+"_deadRegion", digihistName+"_deadRegion;col;row", 416,-0.5,415.5, 160,-0.5,159.5);
       //
       deadsize_[digihistName+"_deadRegionSize"] = iBooker.book1D(digihistName+"_deadRegionSize", digihistName+"_deadRegionSize;Size Empty region", 100,0,4100);
 
