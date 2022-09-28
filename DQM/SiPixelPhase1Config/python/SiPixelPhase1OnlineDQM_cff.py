@@ -1,6 +1,7 @@
 import FWCore.ParameterSet.Config as cms
 
 from DQM.SiPixelPhase1Common.HistogramManager_cfi import *
+from DQM.SiPixelPhase1Common.SiPixelPhase1BumpBonding_cfi import *
 
 SuperimoposePlotsInOnlineBlocks=True
 IsOffline.enabled=False
@@ -97,6 +98,7 @@ siPixelPhase1OnlineDQM_harvesting = cms.Sequence(
  + SiPixelPhase1TrackResidualsHarvester
  + RunQTests_online
  + SiPixelPhase1SummaryOnline
+ + SiPixelPhase1BumpBonding
 # + SiPixelPhase1GeometryDebugHarvester
 )
 
